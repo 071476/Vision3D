@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vision3D - Product Configurator</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { overflow: hidden; font-family: system-ui, sans-serif; background: #0f0f0f; }
+    #canvas-container { width: 100vw; height: 100vh; }
+    .ui {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      background: rgba(0,0,0,0.75);
+      padding: 14px 18px;
+      border-radius: 50px;
+      backdrop-filter: blur(10px);
+    }
+    .ui button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.8);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .ui button:active { transform: scale(1.15); }
+    .price {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 600;
+      background: rgba(0,0,0,0.65);
+      padding: 10px 16px;
+      border-radius: 12px;
+    }
+    .title {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div id="canvas-container"></div>
+
+  <div class="title">Vision3D</div>
+  <div class="price">$ <span id="price">249</span></div>
+
+  <div class="ui">
+    <button style="background:#ef4444" data-color="#ef4444"></button>
+    <button style="background:#3b82f6" data-color="#3b82f6"></button>
+    <button style="background:#22c55e" data-color="#22c55e"></button>
+    <button style="background:#eab308" data-color="#eab308"></button>
+    <button style="background:#a855f7" data-color="#a855f7"></button>
+    <button style="background:#f97316" data-color="#f97316"></button>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
